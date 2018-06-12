@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绚丽小球</title>
+    <style>
+        body{
+            margin: 150px;
+        }
+       #canvas{
+           -moz-box-shadow:0 0 10px #000 ;
+           box-shadow: 0 0 10px #000;
+       }
+    </style>
+</head>
+<body>
+<canvas id="canvas">当前浏览器版本过低或不支持该动画，请升级浏览器或更换浏览器！</canvas>
+
+<script src="js/underscore-min.js"></script>
+<script>
+    // 1.获取当前的画布
+    const canvas=document.getElementById("canvas");
+    const ctx=canvas.getContext("2d");
+    canvas.width=1000;
+    canvas.height=600;
+    canvas.style.backgroundColor="#000";
+
+//    2.新建一个类，小球类
+    class Ball{
+        /**
+         *构造器
+         */
+        constructor(x,y,color){
+            this.x=x;
+            this.y=y;
+            this.color=color;
+            this.r=30;   // 小球半径
+        }
+        /**
+         *绘制小球
+         */
+        render(){
+            ctx.save();
+            // 开始
+            ctx.beginPath();
+            //  绘制圆
+            ctx.arc(this.x,this.y,this.r,0,Math.PI*2);
+            //  填充颜色
+            ctx.fillStyle=this.color;
+            //  画圆
+            ctx.fill();
+            ctx.restore();
+        }
+    }
+    //    3.会移动的一个小球的类
+    class MoveBall extends Ball{ //extends Ball 继承Bll类的所有属性和方法
+        constructor(x,y,color){
+            super(x,y,color);  //传入父类的参数
+
+            //  量的变化  变化方向，半径的变化等等
+            this.dx=_.random(-5,5);  // 或者使用 Math.random();在underscore-min.js内定义的方法
+            this.dy=_.random(-5,5);
+            this.dr=_.random(1,3);
+        }
+            //   数据的更新
+        upData(){
+            this.x += this.dx;
+            this.y += this.dy;
+            this.r -= this.dr;
+            if(this.r<0){
+                this.r=0;
+            }
+        }
+    }
+//    4.实例化对象
+    let ballArr=[];
+    let colorArr =['red','green','yellow','orange','pink','purple','blue'];
+
+//    5.监听鼠标的移动
+    canvas.addEventListener('mousemove',function (e) {
+       ballArr.push(new MoveBall(e.offsetX,e.offsetY,colorArr[_.random(0,colorArr.length-1)]));
+        });
+
+//    6.开启一个定时器
+    setInterval(function () {
+        //清除
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+        // 绘制
+        for(let i=0;i<ballArr.length;i++){
+            ballArr[i].render();
+            ballArr[i].upData();
+
+        }
+    },50);
+</script>
+</body>
+</html>
