@@ -1,0 +1,238 @@
+@charset "utf-8";
+body{
+    padding: 0;
+    margin: 0 auto;
+    min-width: 1080px;
+}
+a{
+    text-decoration: none;
+}
+h1{
+    padding: 12px;
+    font-size: 50px;
+    border-top:2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+.active{
+    border-bottom: 4px solid #ffffff;
+}
+h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+h3{
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+ul li {
+    margin: 0px;
+    padding:0;
+}
+nav{
+    background: rgba(255,255,255,0.2);
+    height: 50px;
+}
+#banner{
+    height: 750px;
+}
+nav ul{
+    list-style: none;
+    margin:0;
+    float: right;
+}
+nav ul li,nav .logo{
+    display: inline-block;
+    line-height: 50px;
+    margin-right: 20px;
+}
+nav ul li a,nav .logo a{
+    line-height: 42px;
+    display: inline-block;
+    height: inherit;
+    color: #ffffff;
+}
+nav .logo{
+    float: left;
+    margin-left: 20px;
+}
+#banner .inner{
+    max-width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: 160px;
+}
+#banner .inner h1{
+    margin: 0;
+    color: white;
+}
+button{
+    border:none;
+    background: #333333;
+    color: #eeeeee;
+    padding: 10px;
+}
+#banner button{
+    padding: 14px 60px;
+    font-size: 20px;
+    letter-spacing: 4px;
+    border-radius: 6px;
+    background: #18a;
+}
+#banner .inner .more{
+    margin-top: 280px;
+}
+.sub-heading{
+    line-height: 30px;
+    color: #ffffff;
+    margin: 30px 0;
+}
+
+.logo{
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.green-section{
+    text-align: center;
+    background: #089db0;
+    padding: 100px 0;
+}
+.green-section .wrapper .hr{
+    width: 600px;
+    height: 4px;
+    color: #710d14;
+
+}
+.wrapper{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.green-section .icon-group .icon {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #cccccc;
+    transform: rotate(45deg);
+    margin: 20px;
+}
+.gray-section{
+    background:#252f34;
+    color: #ffffff;
+}
+.gray-section .img-section{
+    width: 45%;
+}
+.img-section img{
+    width: 100%;
+}
+.gray-section .text-section{
+    width: 55%;
+}
+.article-preview>div{
+    float: left;
+    font-size: 0;
+}
+.article-preview::after,.card-group::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.article-preview .text-section{
+    position: relative;
+    top: 68px;
+    left: 50px;
+}
+.article-preview  .sub-heading{
+    line-height: 20px;
+    font-size: 14px;
+}
+.text-section>*{
+    max-width: 90%;
+}
+.article-preview:nth-child(odd){
+    background-color: rgba(255,255,255,0.05)
+}
+
+
+.purple-section {
+    background: #3f3965;
+    color: #ffffff;
+}
+
+.purple-section .heading-wrapper{
+    text-align: center;
+}
+.purple-section .hr{
+    width: 60%;
+    height: 2px;
+    background: #3f1e5a;
+    margin: 0 auto;
+}
+.card{
+    float: left;
+    width: 50%;
+    min-height: 300px;
+    background: #3f1e5a;
+    padding: 50px;
+    box-sizing: border-box;
+}
+ p{
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+ .card:nth-child(1){
+     background: rgba(255,255,255,0.1);
+ }
+.card:nth-child(2){
+    background: rgba(255,255,255,0.085);
+}
+.card:nth-child(3){
+    background: rgba(255,255,255,0.07);
+}
+.card:nth-child(4){
+    background: rgba(255,255,255,0.055);
+}
+.card:nth-child(5){
+    background: rgba(255,255,255,0.04);
+}
+.card:nth-child(6){
+    background: rgba(255,255,255,0.025);
+}
+.purple-section{
+    padding-bottom: 50px;
+}
+
+footer{
+    color: #ffffff;
+    min-height: 150px;
+    text-align: center;
+}
+.share-group{
+    display: block;
+    width: 1080px;
+    margin: 0 auto;
+    padding: 50px;
+}
+.share-group li{
+    display: inline-block;
+    padding: 10px;
+}
+.copy{
+    display: block;
+    padding-bottom: 30px;
+    font-size: 14px;
+}
+.main{
+    background: url("../images/Jellyfish.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+a{
+    display: block;
+    width: 20px;
+    height: 20px;
+}

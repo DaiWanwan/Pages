@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>幻灯片效果</title>
+    <link href="CSS/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="slider">
+    <!--修改第0步：VIEW->Template（关键字替换），增加Template id-->
+    <div class="main" id="Template_main">
+        <div class="main-i {{css}}" id="main_{{index}}">
+            <div class="caption">
+                <h2>{{h2}}</h2>
+                <h3>{{h3}}</h3>
+            </div>
+            <img src="images/{{index}}.jpg" class="picture" />
+        </div>
+    </div>
+    <div class="ctrl" id="Template_ctrl">
+        <a class="ctrl-i" id='ctrl_{{index}}'
+           href="javascript:switchSlider({{index}});">
+            <img src="images/{{index}}.jpg" />
+        </a>
+    </div>
+</div>
+<script type="text/javascript" src="JS/jQuery.js"></script>
+</body>
+</html>

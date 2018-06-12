@@ -1,0 +1,237 @@
+@charset "utf-8";
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+    min-width:438px ;
+}
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    background: url(http://5b0988e595225.cdn.sohucs.com/images/20170830/ba0e3136eb3b44f8ad770c8319e4920c.jpeg)  no-repeat fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x:hidden;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;;
+    font-size: 20px;
+    text-align: left;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/*导航条开始*/
+.navbar {
+    background-color: rgba(0, 0, 0, 0.41);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    border: 0;
+    z-index: 9999;
+
+}
+.navbar-default .navbar-header .navbar-brand {
+    padding: 6px 20px;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #B4FF8C;
+    font-size: 20px;
+}
+.navbar-default .right{
+    padding: 0 20px;
+}
+.navbar-default .navbar-nav>li>a:hover{
+    color: #70ff5a;
+    background: rgba(0, 0, 0, 0.2);
+}
+.navbar-header .navbar-toggle:active{
+    color: #70ff5a;
+    background: rgba(0, 0, 0, 0.2);
+}
+.navbar-header .navbar-toggle:focus{
+     color: #70ff5a;
+     background: rgba(0, 0, 0, 0.2);
+ }
+
+.navbar-default .navbar-toggle{
+    border-color:#B4FF8C ;
+}
+.navbar-default .navbar-toggle:hover{
+    background: rgba(0, 0, 0, 0.2);
+}
+.navbar-default .navbar-toggle .icon-bar{
+    background-color: #B4FF8C ;
+}
+.navbar-default .navbar-collapse{
+    border-color:#B4FF8C;
+}
+.navbar-default .navbar-nav>li .tooltip .tooltip-inner{
+    background:rgba(0, 0, 0, 0.6) ;
+    color: #70ff5a;
+}
+.tooltip.bottom .tooltip-arrow{
+    border-bottom-color:rgba(0, 0, 0, 0.6);
+}
+.active{
+    color: #70ff5a;
+    background: rgba(0, 0, 0, 0.2);
+}
+/*导航条结束*/
+
+
+
+
+
+
+
+/*文字部分开始*/
+main{
+    margin-top: 115px;
+}
+main .main-text{
+    padding: 25px;
+    background-color:rgba(255, 255, 255, 0.7) ;
+    position: relative;
+    margin: 100px 0 0 0;
+}
+
+main .text-top{
+    max-width: 675px;
+    margin: 50px auto;
+}
+main .text-top p{
+    text-align: center;
+}
+.line{
+    height: 3px;
+    background-color: #4cae4c;
+
+}
+
+main .text-top h3{
+    font-size: 1.15em;
+    font-weight: 500;
+    line-height: 1.15em;
+}
+main .main-text>img{
+    width: 300px;
+    border-radius: 50%;
+    border: 3px solid #4cae4c;
+    display: block;
+    margin: 50px auto;
+    cursor: pointer;
+}
+ main .main-text h1{
+    margin-top: 60px;
+    font-size: 30px;
+    font-weight: 600;
+}
+main .main-text .text-mid,main .main-text .text-end{
+    max-width: 1024px;
+    text-align: center;
+}
+
+
+.text-mid>img{
+    border-radius: 6px;
+    border: 3px #4cae4c outset;
+    width: 80%;
+    height: 55%;
+    margin-top: 25px;
+}
+.text-mid .line,.text-end .line{
+    width: 50%;
+    margin: 2px auto;
+}
+.formtext{
+    margin: 40px auto;
+    text-align: left;
+
+}
+.form-horizontal{
+
+}
+@media (min-width:996px){
+    main .text-top p{
+        text-align: right;
+    }
+    main .text-top{
+        margin: 80px 0 0 0;
+        width: 610px;
+        height: 191px;
+        position: relative;
+    }
+    main .main-text>img{
+        width: 250px;
+        position: absolute;
+        left: 70%;
+        top: 0;
+        margin: 50px 0 0 0;
+    }
+    .text-mid>img{
+        width: 400px;
+        margin:25px 20px 0 0;
+        height: 250px;
+    }
+
+}
+@media (min-width:768px){
+    main .main-text{
+        margin-top: 0;
+    }
+    main .main-text h1{
+        font-size: 36px;
+    }
+    main .main-background{
+        margin: 100px auto;
+        max-width: 1064px;
+        padding: 30px;
+        background-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 14px rgba(76, 174, 76, 0.5);
+    }
+}
+
+    /*文字部分结束*/
+
+
+
+/*底部信息*/
+footer{
+    width: 100%;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.41);
+    padding: 5px 5px  0  5px;
+    text-align: center;
+    margin-top: 50px;
+}
+.footer-content .content{
+    display: inline-block;
+}
+.footer-content ul{
+    margin-bottom: 0;
+}
+.footer-content .content a{
+
+    color: #B4FF8C;
+    font-size: 15px;
+    line-height: 20px;
+    padding-right: 20px;
+}
+
+
+a:link {color: #FF0000}
+a:visited {color: #00FF00}
+a:hover {color: #FF00FF}
+a:active {color: #0000FF}
